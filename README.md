@@ -1,5 +1,27 @@
 # GlobTest
 
+## Réponses
+
+### Question 1
+
+La fonction foo() analyse différents tableaux contenant chacun un intervalle entre deux entiers. La fonction ordonne les intervalles dans l'ordre croissant, elle fusionne aussi les intervalles qui se chevauchent ainsi que les doublons.
+
+### Question 2
+
+- La fonction foo(array $interval):array a été codé en php 7.2 dans le fichier globtest.php
+- La fonction est appelé dans la fonction fooTest():array avec plusieurs jeux de test
+- La fonction displayFoo(array $tab_list):array affiche la suite de résultats de la fonction fooTest():array
+- Les résultats de l'appel de la fonction sont affiché à la fin du fichier globaltest.php et une capture d'écran affiche l'appel de la fonction sur navigateur.
+
+### Question 3
+
+
+- Temps de réflexion ≃ 45 min
+- Temps de documentation ≃ 25 min
+- Temps de codage ≃ 30 min
+#### Temps total: 1h40
+
+
 
 ## Enoncé
 
