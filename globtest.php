@@ -13,23 +13,22 @@ function foo(array $interval):array {
 	// Tri des tableaux dans l'ordre croissant par rapport aux premier entier de chaque intervalle
 	usort($interval, "usort_callback");
 
-	// Création d'un tableau dans lequel on mettra la liste final des interval
+	// Création d'un tableau dans lequel on mettra la liste final des intervalles
 	$interval_list = array();
 	
 	/* 
-		Boucle dans laquelle on parcours chaque élément du tableau mis en entrée.
-		L'objectif est de comparer chaque élément du tableau avec le précédent afin de fusionner les 2 intervalles
-		si néccessaire.
+		Boucle dans laquelle on parcourt chaque élément du tableau mis en entrée.
+		L'objectif est de comparer chaque élément du tableau avec le précédent afin de fusionner les 2 intervalles si néccessaire.
 	*/
 	
 	foreach($interval as $key=>$actual_interval) {
 
 		
-	// Création d'une variable temporaire dans laquelle stocké la valeure du précédent élément initié à l'intervalle [0,0] 
+	// Création d'une variable temporaire dans laquelle stocker la valeur du précédent élément initié à l'intervalle [0,0] 
 	$last_interval = $last_interval ?? [0,0];
 
 		
-		 // On compare les entier de chaque intervalle pour voir si ils se chevauchent. 		
+		 // On compare les entiers de chaque intervalle pour voir si ils se chevauchent. 		
 		if($actual_interval[0] <= $last_interval[1]) {
 
 			if($actual_interval[1] > $last_interval[1]) {
